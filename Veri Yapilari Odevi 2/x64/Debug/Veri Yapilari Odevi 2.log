@@ -1,0 +1,4 @@
+﻿  Veri Yapilari Odevi 2.cpp
+C:\Guray\Kodlar\C++\Veri Yapilari Odevi 2\Veri Yapilari Odevi 2\Veri Yapilari Odevi 2.cpp(45,43): warning C4244: 'bağımsız değişken': 'double' - 'int' dönüşümü; veri kaybı olabilir
+C:\Guray\Kodlar\C++\Veri Yapilari Odevi 2\Veri Yapilari Odevi 2\Veri Yapilari Odevi 2.cpp(46,43): warning C4244: 'bağımsız değişken': 'double' - 'int' dönüşümü; veri kaybı olabilir
+  Veri Yapilari Odevi 2.vcxproj -> C:\Guray\Kodlar\C++\Veri Yapilari Odevi 2\x64\Debug\Veri Yapilari Odevi 2.exe
