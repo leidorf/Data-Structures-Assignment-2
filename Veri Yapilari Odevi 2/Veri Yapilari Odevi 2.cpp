@@ -48,15 +48,15 @@ void AgacMatrisiOlustur(int** M, Dugum* kok, int sutun, int satir, int yukseklik
 
 //Binary Tree'yi yazdirma
 void AgacYazdir(Dugum* kok) {
-    int h = AgacDerinligi(kok);
-    int col = sutunBul(h);
-    int** M = new int* [h];
-    for (int i = 0; i < h; i++) {
-        M[i] = new int[col];
+    int derinlik = AgacDerinligi(kok);
+    int sutun = sutunBul(derinlik);
+    int** M = new int* [derinlik];
+    for (int i = 0; i < derinlik; i++) {
+        M[i] = new int[sutun];
     }
-    AgacMatrisiOlustur(M, kok, col / 2, 0, h);
-    for (int i = 0; i < h; i++) {
-        for (int j = 0; j < col; j++) {
+    AgacMatrisiOlustur(M, kok, sutun / 2, 0, derinlik);
+    for (int i = 0; i < derinlik; i++) {
+        for (int j = 0; j < sutun; j++) {
             if (M[i][j] == 0)
                 cout << " " << " ";
             else if (M[i][j] == -842150451) // Bos dugumleri yazdirmayi engelle
@@ -182,14 +182,14 @@ void postorder(Dugum* dugum) {
 
 //Girdisi yapilan plakalarla eslesen sehirleri yazdirma
 void SehirYazdir(string (*sehirBilgileri)[18], int *plaka1, int *plaka2) {
-    int x=0;
+    int eslesenSehir=0;
     for (int j = 0; j < 18; j++) {
         if (to_string(*plaka1) == sehirBilgileri[0][j] || to_string(*plaka2) == sehirBilgileri[0][j] ) {
-            x++;
+            eslesenSehir++;
         }
     }
-    if (x < 1) {
-        cout << "Girdiginiz plakayla eslesen sehir bulunamadi." << endl;
+    if (eslesenSehir < 1) {
+        cout << "Girdiginiz plakayla eslesen sehir bulunamadi." << endl;    //Eslesen sehir bulunmazsa yazdirilan uyari mesaji
         return;
     }
     cout << "Sehirler : ";
